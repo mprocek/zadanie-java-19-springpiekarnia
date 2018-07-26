@@ -3,14 +3,12 @@ package procek.marek.springpiekarnia;
 public class Product {
     private String name;
     private double price;
-    private int count;
     private String imageUrl;
 
 
-    public Product(String name, double price, int count, String imageUrl) {
+    public Product(String name, double price, String imageUrl) {
         this.name = name;
         this.price = price;
-        this.count = count;
         this.imageUrl = imageUrl;
     }
 
@@ -30,9 +28,6 @@ public class Product {
         return imageUrl;
     }
 
-    public int getCount() {
-        return count;
-    }
 
     public void setName(String name) {
         this.name = name;
@@ -40,10 +35,6 @@ public class Product {
 
     public void setPrice(double price) {
         this.price = price;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
     }
 
     public void setImageUrl(String imageUrl) {
@@ -55,7 +46,6 @@ public class Product {
         return "Product{" +
                 "name='" + name + '\'' +
                 ", price=" + price +
-                ", count=" + count +
                 '}';
     }
 }

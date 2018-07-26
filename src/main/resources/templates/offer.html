@@ -15,11 +15,9 @@
     <img th:src="${productMagazine.imageUrl}"/>
     <br/>
     <br/>
-    <form action="/addbasket" method="post" th:object="${addProduct}">
-        <input type="text" th:value="${productMagazine.name}" th:field="*{name}"/>
-        <input type="hidden" th:value="${productMagazine.price}" th:field="*{price}"/>
-        Ilość <input type="number" step="1" min="1" value="1" th:field="*{count}"/>
-        <input type="hidden" th:value="${productMagazine.imageUrl}" th:field="*{imageUrl}"/>
+    <form action="/addbasket" method="post">
+        <input type="hidden" th:value="${productMagazine.name}" name="name"/>
+        Ilość <input type="number" step="1" min="1" value="1" name="quantity"/>
         <input type="submit" value="Dodaj">
     </form>
 </div>
